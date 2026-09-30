@@ -316,3 +316,5 @@ indefinitely otherwise.
    starting point, not legal advice, and Nigerian consumer-protection (FCCPA)
    and data-protection (NDPA) duties depend on your specific business.
 6. Run `php artisan config:cache route:cache view:cache` and serve over HTTPS.
+#   h a n b e l l  
+ 
