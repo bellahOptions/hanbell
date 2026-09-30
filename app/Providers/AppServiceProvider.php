@@ -11,8 +11,10 @@ use App\Support\Seo;
 use App\Support\Tokens\UrlToken;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
+
 use Illuminate\Validation\Rules\Password;
 
 class AppServiceProvider extends ServiceProvider
@@ -56,6 +58,7 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        Schema::defaultStringLength(191);
         /*
          * Nested relation loading is the single biggest source of N+1 queries in
          * a marketplace listing, so it is treated as an error outside
